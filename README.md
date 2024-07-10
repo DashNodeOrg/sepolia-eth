@@ -14,7 +14,7 @@
     sudo install -m 0755 -d /etc/apt/keyrings
     sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
     sudo chmod a+r /etc/apt/keyrings/docker.asc
-    
+
     echo \
       "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
       $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
@@ -32,6 +32,12 @@
 ### Relogin to your server to take effect from usermod !!!
 
 ## Install and Run 
+- **Create necessary folders**
+    ```
+    mkdir /home/geth-data
+    mkdir /home/prysm-data
+    mkdir /home/jwt
+    ```
 - **Clone this repo to your server and start all docker containers**
     ```
     git clone https://github.com/CryptoNodeID/sepolia-eth.git

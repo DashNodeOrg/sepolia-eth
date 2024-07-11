@@ -26,6 +26,7 @@
 
 - **Run Docker as a non-root user**
     ```
+    sudo chmod 666 /var/run/docker.sock
     sudo usermod -aG docker <your_user>
     ```
 

@@ -37,6 +37,7 @@ services:
       --execution-endpoint=http://geth-sepolia:8551
       --genesis-beacon-api-url=https://sepolia.beaconstate.info
       --checkpoint-sync-url=https://sepolia.beaconstate.info
+      --enable-experimental-backfill=true
       --sepolia --accept-terms-of-use
     volumes:
       - '/home/prysm-data:/data'
